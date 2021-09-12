@@ -8,30 +8,129 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Red Hat Display', sans-serif;
+    }
+    .main-div{
+      background: #E0E8FF url('images/pattern-background-desktop.svg') no-repeat fixed top;
+      max-width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cart{
+      width: 350px;
+      height: 540px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+
+    }
+    .cart-image{
+      width: 100%;
+      height: auto;
+      border-radius: 15px 15px 0 0;
+    }
+    .cart-content{ display: flex;
+      align-items: center;
+      flex-direction: column;}
+    .cart-title{
+      font-size: 25px;
+      margin: 20px;
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+    }
+    .cart-body{
+      font-size: 16px;
+      text-align: center;
+      margin: 0 20px 20px 20px;
+      color: hsl(224, 23%, 55%);
+    }
+    .cart-plan{
+      display: grid;
+      grid-template-columns: 1fr 2fr 1.5fr;
+      align-content: center;
+      margin: 0 25px 0 25px;
+      background: hsl(225, 100%, 98%);
+      padding: 20px;
+      grid-gap: 5px;
+      border-radius: 10px;
+    }
+    .plan-name{
+      color:hsl(223, 47%, 23%);
+    }
+    .plan-cost{
+      color:hsl(224, 23%, 55%);
+    }
+    .cart-change{
+      align-self: center;
+      justify-self: end;
+      color: hsl(245, 75%, 52%);
+    }
+    .cart-change:hover{
+      text-decoration: none;
+      color: #766CF1;
+      
+    }
+    .cart-footer{
+      display: flex;
+      flex-direction: column;
+    }
+    .cart-footer button{
+      margin: 0 25px 0 25px;
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 7px;
+      border: none;
+      color: #fff;
+      background: hsl(245, 75%, 52%);
+    }
+    .cart-footer button:hover {
+      background: #766CF1;
+    }
+    .cart-footer a{
+      text-decoration: none;
+      margin: 25px auto;
+      color: hsl(224, 23%, 55%);
+    }
+    .cart-footer a:hover{
+      color: hsl(223, 47%, 23%);;
+    }
   </style>
 </head>
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<div class="main-div">
+  <div class="cart">
+    <div class="cart-header">
+      <img class="cart-image" src="images/illustration-hero.svg" alt="Cart Image Mr. Hero">
+    </div>
+    <div class="cart-content">
+      <h1 class="cart-title">Order Summary</h1>
+      <p class="cart-body"> You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+    </div>
+    <div class="cart-plan">
+      <img src="images/icon-music.svg" alt="Music Icon">
+    <div>
+      <p class="plan-name">Annual Plan</p>
+      <span class="plan-cost">$59.99/year</span>
+    </div>
+      <a href="#" class="cart-change">change</a>
+    </div>
+    <div class="cart-footer">
+      <button>Proceed to Payment</button>
+      <a href="">Cancel Order</a>
+    </div>
   </div>
+</div>
+ 
 </body>
 </html>
